@@ -6,8 +6,9 @@ import {
   FaGithub,
   FaFacebook,
 } from "react-icons/fa";
+import { Link } from "react-scroll";
 
-import logo from "../assets/logo_3.png";
+import logo from "../assets/Faraz_Ahmed.png";
 
 const Navbar = () => {
   const [nav, setNav] = React.useState(false);
@@ -19,16 +20,38 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={logo} alt="Logo" style={{ width: "90px" }} />
+        <Link to="home" smooth="true" className="cursor-pointer">
+          <img src={logo} alt="Logo" style={{ width: "90px" }} />
+        </Link>
       </div>
 
       {/* Menu  */}
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>About </li>
-        <li>Skills</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li>
+          <Link to="home" smooth="true">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="about" smooth="true">
+            About
+          </Link>{" "}
+        </li>
+        <li>
+          <Link to="work" smooth="true">
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link to="skills" smooth="true">
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" smooth="true">
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Hamburger */}
